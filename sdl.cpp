@@ -142,11 +142,11 @@ class SystemController{
     }
 
     void polling(){
-      SDL_PumpEvents(); // atualiza estado do teclado
-      if (state[SDL_SCANCODE_LEFT]) model.set_target((-1)*1, 0);
-      if (state[SDL_SCANCODE_RIGHT]) model.set_target(1, 0);
-      if (state[SDL_SCANCODE_UP]) model.set_target(0, (-1)*1);
-      if (state[SDL_SCANCODE_DOWN]) model.set_target(0, 1);
+      //SDL_PumpEvents(); // atualiza estado do teclado
+      //if (state[SDL_SCANCODE_LEFT]) model.set_target((-1)*1, 0);
+      //if (state[SDL_SCANCODE_RIGHT]) model.set_target(1, 0);
+      //if (state[SDL_SCANCODE_UP]) model.set_target(0, (-1)*1);
+      //if (state[SDL_SCANCODE_DOWN]) model.set_target(0, 1);
 
       while (SDL_PollEvent(&evento)) {
         if (evento.type == SDL_QUIT) {
@@ -174,6 +174,7 @@ class SystemController{
     }
     void calcular_posicao(){  
       model.set_x_atual(model.get_x_atual() + model.get_v_atual() * model.get_dt());
+      model.set_target(model.get_v_atual() * model.get_dt(), 0);
     }
     void update(){
       calcular_forca();
@@ -226,6 +227,7 @@ int main() {
   // Laco principal do jogo
   while(controller.get_rodando()) {
     controller.polling();
+    controller.update();
     view.renderizar();
   }
 
