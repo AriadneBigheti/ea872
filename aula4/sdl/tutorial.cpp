@@ -2,8 +2,8 @@
 #include <SDL2/SDL_image.h>
 #include <iostream>
 
-const int SCREEN_WIDTH = 640;
-const int SCREEN_HEIGHT = 480;
+const int SCREEN_WIDTH = 840;
+const int SCREEN_HEIGHT = 680;
 
 //Model
 class SystemModel{
@@ -106,20 +106,20 @@ class SystemView{
 
       // Carregando texturas
       // personagem
-      this->texture = IMG_LoadTexture(this->renderer, "./capi.png");
+      this->texture = IMG_LoadTexture(this->renderer, "./spaceship1.png");
       // fundo
-      this->texture2 = IMG_LoadTexture(this->renderer, "./park.jpeg");
+      this->texture2 = IMG_LoadTexture(this->renderer, "./purplegalaxy.jpg");
 
       // Quadrado onde a textura sera desenhada
       target.y = model.get_y0();
-      target.x = SCREEN_WIDTH/2;
+      target.x = SCREEN_WIDTH/2 - 50;
       SDL_QueryTexture(texture, nullptr, nullptr, &target.w,  &target.h);
 
    }
 
     void renderizar(){
         // Desenhar a cena
-      target.y = model.get_y_atual()*40;
+      target.y = model.get_y_atual()*50;
       SDL_RenderClear(renderer);
       SDL_RenderCopy(renderer, texture2, nullptr, nullptr);
       SDL_RenderCopy(renderer, texture, nullptr, &target);
@@ -212,7 +212,7 @@ class SystemController{
 
 int main() {
   
-  SystemModel model = SystemModel(1, 1, 0, 1, 0, 0.1);
+  SystemModel model = SystemModel(1, 1, 0, -7, -1, 0.05);
   SystemView view = SystemView(model);
   SystemController controller = SystemController(model);
 
