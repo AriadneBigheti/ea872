@@ -3,23 +3,13 @@
 #include <SDL2/SDL_image.h>
 #include <iostream>
 
+
 using namespace std;
 
 const int SCREEN_WIDTH = 840;
 const int SCREEN_HEIGHT = 680;
 
-//View
-class SystemView{
-  private:
-  SystemModel &model;
-  SDL_Renderer* renderer;
-  SDL_Window* window;    
-  SDL_Rect target;
-  SDL_Texture *texture;
-  SDL_Texture *texture2;
-
-  public:
-    SystemView(SystemModel &model) : model(model){
+  SystemView::SystemView(SystemModel &model) : model(model){
 
       // Inicializando o submodelema de video do SDL
       if ( SDL_Init (SDL_INIT_VIDEO) < 0 ) {
@@ -62,9 +52,9 @@ class SystemView{
       target.x = SCREEN_WIDTH/2 - 50;
       SDL_QueryTexture(texture, nullptr, nullptr, &target.w,  &target.h);
 
-   }
+  }
 
-    void renderizar(){
+  void SystemView::renderizar(){
         // Desenhar a cena
       target.y = model.get_y_atual()*50;
       SDL_RenderClear(renderer);
@@ -74,11 +64,10 @@ class SystemView{
 
       // Delay para diminuir o framerate
       SDL_Delay(10);
-    }
-    void destruir(){
+  }
+  void SystemView::destruir(){
       SDL_DestroyTexture(texture);
       SDL_DestroyRenderer(renderer);
       SDL_DestroyWindow(window);
       SDL_Quit();
-    }
-}
+  }
