@@ -1,0 +1,2 @@
+/usr/bin/ar qc libSystemController.a  CMakeFiles/SystemController.dir/src/SystemController.cpp.o
+/usr/bin/ranlib libSystemController.a

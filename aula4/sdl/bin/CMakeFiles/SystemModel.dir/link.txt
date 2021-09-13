@@ -1,0 +1,2 @@
+/usr/bin/ar qc libSystemModel.a  CMakeFiles/SystemModel.dir/src/SystemModel.cpp.o
+/usr/bin/ranlib libSystemModel.a

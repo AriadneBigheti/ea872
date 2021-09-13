@@ -1,0 +1,6 @@
+/home/ariadne/Documentos/ea872/Ariadne/ea872/aula4/sdl/bin/CMakeFiles/edit_cache.dir
+/home/ariadne/Documentos/ea872/Ariadne/ea872/aula4/sdl/bin/CMakeFiles/SystemController.dir
+/home/ariadne/Documentos/ea872/Ariadne/ea872/aula4/sdl/bin/CMakeFiles/rebuild_cache.dir
+/home/ariadne/Documentos/ea872/Ariadne/ea872/aula4/sdl/bin/CMakeFiles/SystemView.dir
+/home/ariadne/Documentos/ea872/Ariadne/ea872/aula4/sdl/bin/CMakeFiles/SystemModel.dir
+/home/ariadne/Documentos/ea872/Ariadne/ea872/aula4/sdl/bin/CMakeFiles/Asteroids.dir

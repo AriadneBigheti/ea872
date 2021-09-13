@@ -1,0 +1,2 @@
+/usr/bin/ar qc libSystemView.a  CMakeFiles/SystemView.dir/src/SystemView.cpp.o
+/usr/bin/ranlib libSystemView.a

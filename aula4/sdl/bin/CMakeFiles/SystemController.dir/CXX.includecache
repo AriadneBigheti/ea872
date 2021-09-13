@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/SystemController.h
+SystemModel.h
+../include/SystemModel.h
+SDL2/SDL.h
+-
+SDL2/SDL_image.h
+-
+
+../include/SystemModel.h
+
+/home/ariadne/Documentos/ea872/Ariadne/ea872/aula4/sdl/src/SystemController.cpp
+SystemController.h
+/home/ariadne/Documentos/ea872/Ariadne/ea872/aula4/sdl/src/SystemController.h
+SDL2/SDL.h
+-
+SDL2/SDL_image.h
+-
+iostream
+-
+
